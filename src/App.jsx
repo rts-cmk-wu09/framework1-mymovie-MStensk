@@ -1,22 +1,23 @@
 import "./App.css";
-import HeadingOne from "./components/HeadingOne";
+import Heading from "./components/Heading";
 import MovieCard from "./templates/MovieCard";
-import HeadingTwo from "./components/HeadingTwo";
 import SeeMoreButton from "./components/SeeMoreButton";
+import Switch from "./components/Switch";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <HeadingOne />
+      <header className="gridContainer">
+        <h1 style={{ fontSize: "16px", justifySelf: "center", gridColumn: "2", margin: "1.4em" }}>MyMovies</h1>
+        <Switch />
       </header>
       <main>
         <section>
           <div className="flexContainer">
-            <HeadingTwo />
+            <h2 style={{ fontSize: "16px" }}>Now Showing</h2>
             <SeeMoreButton />
           </div>
-          <div className="flexContainer2 scroll">
+          <div className="flexContainer2">
             <MovieCard />
             <MovieCard />
             <MovieCard />
