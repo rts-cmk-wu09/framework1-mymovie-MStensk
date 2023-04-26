@@ -36,9 +36,20 @@ header{
 .flexContainer2::-webkit-scrollbar {
   display: none;
 }
+.VerticalMovieListTitleLayout {
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+  padding-bottom: 2rem;
+}
+.movieListContainerLayout {
+  flex-direction: column;
+  gap: 16px;
+}
 div p{
   color: #AAA9B1;
   display: inline-block;
+  margin: 0;
 }
 div svg{
   padding-right: 0.4em;

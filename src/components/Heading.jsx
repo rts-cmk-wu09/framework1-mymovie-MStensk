@@ -1,13 +1,18 @@
-import styled from "styled-components";
 
-const Heading = ({ text, size, type, weight }) => {
-    const StyledHeading = styled(type)`
-    font-size: ${size};
-    font-weight:${weight};
-    color: black;
-`
+import styled, { css } from "styled-components";
 
-    return <StyledHeading>{text}</StyledHeading>;
+const StyledHeading = styled((props) => props.as)`
+  font-size: ${(props) => props.size}px;
+  grid-column-start: 2;
+  justify-self: center;
+  ${(props) =>
+        props.as === "h1" &&
+        css`
+      align-self: center;
+    `}
+`;
+
+const Heading = (props) => {
+    return <StyledHeading {...props}>{props.title}</StyledHeading>;
 };
-
 export default Heading;

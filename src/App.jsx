@@ -1,20 +1,21 @@
 import "./App.css";
 import Heading from "./components/Heading";
 import MovieCard from "./templates/MovieCard";
+import MovieItem from "./templates/MovieItem";
 import SeeMoreButton from "./components/SeeMoreButton";
 import Switch from "./components/Switch";
-
+import Navigation from "./components/Navigation";
 function App() {
   return (
     <div className="App">
       <header className="gridContainer">
-        <h1 style={{ fontSize: "16px", justifySelf: "center", gridColumn: "2", margin: "1.4em" }}>MyMovies</h1>
+        <Heading title="MyMovies" size="16" as="h1" />
         <Switch />
       </header>
       <main>
         <section>
           <div className="flexContainer">
-            <h2 style={{ fontSize: "16px" }}>Now Showing</h2>
+            <Heading title="Now Showing" size="16" as="h2" />
             <SeeMoreButton />
           </div>
           <div className="flexContainer2">
@@ -23,10 +24,26 @@ function App() {
             <MovieCard />
           </div>
         </section>
-        <section></section>
+        <section className="VerticalMovieListContainer">
+          <div className="flexContainer justify-space-between VerticalMovieListTitleLayout">
+            <Heading title="Popular" size="16" as="h2" />
+            <SeeMoreButton />
+          </div>
+          <div className="flexContainer2 movieListContainerLayout">
+            <MovieItem />
+            <MovieItem />
+            <MovieItem />
+            <MovieItem />
+            <MovieItem />
+            <MovieItem />
+            <MovieItem />
+            <MovieItem />
+          </div>
+
+        </section>
       </main>
       <footer>
-        <nav></nav>
+        <Navigation />
       </footer>
     </div>
   );
