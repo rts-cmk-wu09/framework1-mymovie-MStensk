@@ -5,6 +5,7 @@ import Image from "../components/Image";
 import Label from "../components/Label";
 import Time from "../components/Time";
 import MovieRating from "../components/MovieRating";
+import coverimage from "../assets/moviecover.png";
 
 const StyledArticle = styled.article`
   display: flex;
@@ -22,7 +23,7 @@ const StyledDiv = styled.div`
 const MovieItem = () => {
     return (
         <StyledArticle>
-            <Image width="85" height="120" />
+            <Image src={coverimage} width="85" height="120" />
             <StyledSection>
                 <Heading title="Venom Let There Be Carnage" size="14" as="h3" />
                 <MovieRating />

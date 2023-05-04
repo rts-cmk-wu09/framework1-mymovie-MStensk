@@ -1,14 +1,16 @@
 import styled from "styled-components";
-import { FaFilm, FaTicketAlt, FaRegBookmark } from "react-icons/fa";
+import { FaRegBookmark } from "react-icons/fa";
+import { TfiTicket } from "react-icons/tfi";
+import { FcFilmReel } from "react-icons/fc";
 
 const StyledNav = styled.nav`
   position: fixed;
-  bottom: 0;
+  bottom: -10px;
   width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 80px;
+  height: 100px;
   background-color: #fff;
   font-size: 1.4rem;
   color: #979797;
@@ -18,8 +20,8 @@ const StyledNav = styled.nav`
 const Navigation = () => {
     return (
         <StyledNav>
-            <FaFilm />
-            <FaTicketAlt />
+            <FcFilmReel />
+            <TfiTicket />
             <FaRegBookmark />
         </StyledNav>
     );

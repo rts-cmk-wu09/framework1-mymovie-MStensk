@@ -1,18 +1,20 @@
-import coverimage from "../assets/moviecover.png";
 import styled, { css } from "styled-components";
 
 const StyledImg = styled.img`
-${(props) =>
-        props.shadow &&
-        css`
-      box-shadow: 2px 6px 10px 0px #00000054;
-    `}
+  ${(props) =>
+    (props.shadow &&
+      css`
+        box-shadow: 0px 5px 10px rgb(0 0 0 / 0.35);
+      `) ||
+    (props.objectFit &&
+      css`
+        object-fit: cover;
+      `)}
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
   border-radius: 10px;
 `;
-
 const Image = (props) => {
-    return <StyledImg {...props} src={coverimage} alt="Movie_Poster" />;
+  return <StyledImg {...props} />;
 };
 export default Image;

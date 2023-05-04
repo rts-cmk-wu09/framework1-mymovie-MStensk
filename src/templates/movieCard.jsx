@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Heading from "../components/Heading";
 import Image from "../components/Image";
 import MovieRating from "../components/MovieRating";
+import coverimage from "../assets/moviecover.png";
+
 
 const StyledArticle = styled.article`
   display: flex;
@@ -14,7 +16,7 @@ const MovieCard = () => {
     return (
         <StyledArticle>
             <figure>
-                <Image shadow={true} />
+                <Image shadow={true} src={coverimage} alt="Cover_Image" />
                 <Heading title="Venom Let There be Carnage" size="14" as="h3" />
                 <MovieRating />
             </figure>
